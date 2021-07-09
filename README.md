@@ -1,5 +1,19 @@
-# Project Name
-Project description
+# Critical Files Analyzer
+This powershell script allows to analyze one or multiple OpCon Critical files.
+
+The analysis is done on "Invalid event" entries i.e "Invalid event (schedule not found)"
+
+The output of the analysis can be both on the screen and on an output file.
+
+Several information will be provided:
+
+
+* Total number of 'Invalid events' 
+* Count aggregated by error type (i.e.  job not running, job non on schedule, etc)
+* Count aggregated by event actions (JOB:KILL, JOB:SKIP, etc)
+* Count aggregated by Schedule Name 
+* Possibility to list all matching rows
+
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
@@ -8,9 +22,21 @@ SMA Technologies assumes no liability for damage caused by the usage of any of t
 
 # Prerequisites
 
+* Powershell v5.1
 
 # Instructions
 
+```
+powershell.exe .\CriticalFileAnalyzer.ps1
+
+```  
+Follow the interactive menu, you will be asked to chose the path where the Critical files are stored.
+
+The script can scan :
+
+* A single file
+* A specific folder
+* A specific folder and all the underlying subfolders
 
 # License
 Copyright 2019 SMA Technologies
